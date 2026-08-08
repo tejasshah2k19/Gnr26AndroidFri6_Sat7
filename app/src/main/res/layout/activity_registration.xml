@@ -47,12 +47,46 @@
         android:inputType="textPassword"
         />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgRegistrationGender"
+        android:orientation="horizontal"
+        android:layout_below="@id/edtRegistrationPassword"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbRegistrationMale"
+            android:text="Male"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbRegistrationFemale"
+            android:text="Female"
+            />
+
+
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbRegistrationtnc"
+        android:text="Accept Terms and Conditions"
+        android:layout_below="@id/rgRegistrationGender"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnRegistrationSubmit"
-        android:layout_below="@id/edtRegistrationPassword"
+        android:layout_below="@id/cbRegistrationtnc"
         android:text="Submit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"

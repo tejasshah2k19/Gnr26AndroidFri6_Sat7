@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUserActivity"
+    android:background="#B9DBE4"
+    >
+
+<ImageView
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:id="@+id/imgNewUserLogo"
+    android:src="@drawable/education"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="100dp"
+    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtNewUserFirstname"
+        android:layout_below="@id/imgNewUserLogo"
+        android:layout_marginTop="100dp"
+        android:hint="@string/firstname"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtNewUserEmail"
+        android:layout_below="@id/edtNewUserFirstname"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/mail"
+        android:drawablePadding="10dp"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtNewUserPassword"
+        android:layout_below="@id/edtNewUserEmail"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="10dp"
+
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgNewUserGender"
+        android:layout_below="@id/edtNewUserPassword"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbNewUserGenderMale"
+            android:text="@string/male"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbNewUserGenderFemale"
+            android:text="@string/female"
+            />
+
+    </RadioGroup>
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbNewUserTC"
+        android:text="@string/i_accept_tnc"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_below="@id/rgNewUserGender"
+
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNewUserSubmit"
+            android:text="@string/submit"
+        android:layout_below="@id/cbNewUserTC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Gnr26AndroidFri6_Sat7</string>
+    <string name="email">Email</string>
+    <string name="firstname">Firstname</string>
+    <string name="password">Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="i_accept_tnc">I accept TnC</string>
+    <string name="submit">Submit</string>
+    <string name="upper">UPPER</string>
+    <string name="reverse">REVERSE</string>
 </resources>

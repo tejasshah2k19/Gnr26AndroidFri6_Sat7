@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputNameActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtInputNameName"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearInputNameButton"
+        android:layout_below="@id/edtInputNameName"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+         >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInputNameUpper"
+            android:text="@string/upper"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInputNameReverse"
+            android:text="@string/reverse"
+            android:layout_marginStart="10dp"
+            />
+
+    </LinearLayout>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/tvInputNameResult"
+         android:layout_below="@id/linearInputNameButton"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="30dp"
+         android:textSize="15pt"
+         />
+
+</RelativeLayout>
