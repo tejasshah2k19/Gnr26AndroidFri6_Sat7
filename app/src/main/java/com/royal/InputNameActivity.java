@@ -45,8 +45,24 @@ public class InputNameActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //
                 Log.i("InputNameActivity","upper button click");
+                String name = edtName.getText().toString();
+
+                String nameUpper = name.toUpperCase();
+
+                tvResult.setText(nameUpper);
+
             }
         });
+
+
+        //
+        btnRev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("InputNameActivity","reverse button click");
+            }
+        });
+
 
     }
 
