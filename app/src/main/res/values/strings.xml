@@ -9,4 +9,10 @@
     <string name="submit">Submit</string>
     <string name="upper">UPPER</string>
     <string name="reverse">REVERSE</string>
+    <string name="enter_n1">Enter n1</string>
+    <string name="add">ADD</string>
+    <string name="subtract">SUBTRACT</string>
+    <string name="multiply">MULTIPLY</string>
+    <string name="enter_n2">Enter n2</string>
+    <string name="new_user">New User ?</string>
 </resources>

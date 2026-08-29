@@ -69,5 +69,16 @@
         android:layout_centerHorizontal="true"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoginSignupLink"
+        android:text="@string/new_user"
+        android:layout_below="@id/btnLoginSubmit"
+        android:textSize="8pt"
+        android:textColor="#BA255F"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
 
 </RelativeLayout>

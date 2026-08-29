@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalcActivity"
+    android:background="#196D65">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCalculatorTitle"
+        android:text="Calculator"
+        android:textStyle="bold"
+        android:textColor="#123456"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtCalculatorInput1"
+        android:layout_below="@id/tvCalculatorTitle"
+        android:layout_marginTop="10dp"
+         android:layout_marginStart="20dp"
+        android:hint="@string/enter_n1"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtCalculatorInput2"
+        android:layout_below="@id/edtCalculatorInput1"
+        android:layout_marginTop="10dp"
+         android:layout_marginStart="20dp"
+        android:hint="@string/enter_n2"
+        android:inputType="number"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearCalculatorButton"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edtCalculatorInput2"
+        android:layout_marginTop="50dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalculatorAdd"
+             android:text="@string/add"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalculatorSub"
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/subtract"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalculatorMultiply"
+             android:text="@string/multiply"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCalculatorResult"
+        android:layout_below="@id/linearCalculatorButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="15pt"
+        android:textStyle="bold"
+        />
+
+
+
+</RelativeLayout>
