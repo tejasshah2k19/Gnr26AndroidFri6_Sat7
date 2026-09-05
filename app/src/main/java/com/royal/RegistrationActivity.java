@@ -1,6 +1,7 @@
 package com.royal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -59,11 +60,18 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 if(!isError) {
                     //db insertion
+                    //shared pref
+                    SharedPreferences preferences = getSharedPreferences("Gnr26App",MODE_PRIVATE);
+                    SharedPreferences.Editor edit =  preferences.edit();
+                    edit.putString("email",email);
+                    edit.apply();
+                    
 
 
                     Toast.makeText(getApplicationContext(),"Signup Success",Toast.LENGTH_LONG).show();
                     //navigate to login
                     Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                    intent.putExtra("email",email);
                     startActivity(intent);
                 }else{
 

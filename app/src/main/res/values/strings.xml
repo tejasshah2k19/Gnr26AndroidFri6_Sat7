@@ -15,4 +15,6 @@
     <string name="multiply">MULTIPLY</string>
     <string name="enter_n2">Enter n2</string>
     <string name="new_user">New User ?</string>
+    <string name="save">Save</string>
+    <string name="list_student">List Student</string>
 </resources>
