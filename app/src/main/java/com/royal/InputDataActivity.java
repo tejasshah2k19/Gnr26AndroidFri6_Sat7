@@ -15,12 +15,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class InputDataActivity extends AppCompatActivity {
 
 
     EditText edtFirstname;
     Button btnSave;
     TextView tvListLink;
+    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +52,22 @@ public class InputDataActivity extends AppCompatActivity {
                 //store
                 SharedPreferences sharedPreferences = getSharedPreferences("studentData",MODE_PRIVATE);
 
+
+               Set<String> list =  sharedPreferences.getStringSet("list",null);
+
+               if(list ==null){
+                   list = new HashSet<>();
+               }
+
+               list.add(firstName);
+
+
                 //editor
                 SharedPreferences.Editor editor =  sharedPreferences.edit();
 
                 //write data
-                editor.putString("firstName",firstName);
+//                editor.putString("firstName",firstName);
+                editor.putStringSet("list",list);
 
                 editor.apply();
 
@@ -64,12 +79,33 @@ public class InputDataActivity extends AppCompatActivity {
             }
         });
 
-        tvListLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ListDataActivity.class);
-                startActivity(intent);
-            }
-        });
+//        tvListLink.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), ListDataActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        TvListLinkListener listener = new TvListLinkListener();
+//        tvListLink.setOnClickListener(listener);
+
+    tvListLink.setOnClickListener(v->{
+        Intent intent = new Intent(getApplicationContext(), ListDataActivity.class);
+        startActivity(intent);
+    });
+
     }
 }
+
+//class TvListLinkListener implements  View.OnClickListener{
+//
+//    @Override
+//    public void onClick(View view) {
+//        //logic
+//    }
+//}
+
+
+
+

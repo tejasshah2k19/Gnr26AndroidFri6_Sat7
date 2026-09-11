@@ -10,6 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Set;
+
 public class ListDataActivity extends AppCompatActivity {
 
     TextView tvName;
@@ -29,7 +31,12 @@ public class ListDataActivity extends AppCompatActivity {
 
         //read
         SharedPreferences sp = getSharedPreferences("studentData",MODE_PRIVATE);
-        String firstName = sp.getString("firstName","");
-        tvName.setText(firstName);
+//        String firstName = sp.getString("firstName","");
+        Set<String> list = sp.getStringSet("list",null);
+        if(list!=null){
+            tvName.setText(list.toString());
+        }
+//        tvName.setText(firstName);
+
     }
 }
