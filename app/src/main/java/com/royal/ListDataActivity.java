@@ -2,6 +2,10 @@ package com.royal;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,8 +18,9 @@ import java.util.Set;
 
 public class ListDataActivity extends AppCompatActivity {
 
-    TextView tvName;
-
+//    TextView tvName;
+    Spinner listSpinerNames;
+    ListView listViewNames;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,17 +31,36 @@ public class ListDataActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    listSpinerNames = findViewById(R.id.spinnerListDataNames);
+    listViewNames = findViewById(R.id.listViewListDataNames);
 
-        tvName = findViewById(R.id.tvListDataName);
+
+
+    //ListView
+
+        //tvName = findViewById(R.id.tvListDataName);
 
         //read
         SharedPreferences sp = getSharedPreferences("studentData",MODE_PRIVATE);
 //        String firstName = sp.getString("firstName","");
-        Set<String> list = sp.getStringSet("list",null);
-        if(list!=null){
-            tvName.setText(list.toString());
-        }
+        Set<String> listOfNames = sp.getStringSet("list",null);
+//        if(list!=null){
+//            tvName.setText(list.toString());
+//        }
 //        tvName.setText(firstName);
+
+
+        String list[]  = new String[listOfNames.size()];
+        int i=0;
+        for(String x:listOfNames){
+            list[i] = x;
+            i++;
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,list);
+
+        listSpinerNames.setAdapter(adapter);
+        listViewNames.setAdapter(adapter);
 
     }
 }
