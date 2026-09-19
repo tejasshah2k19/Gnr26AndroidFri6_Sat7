@@ -1,8 +1,11 @@
 package com.royal.whatsapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -39,6 +42,23 @@ public class CallActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,contactNum);
         listCall.setAdapter(adapter);
+
+        listCall.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.i("CallActivity","i => "+i);
+                Log.i("CallActivity","l => "+l);
+
+                Log.i("CallActivity","Mobile => "+contactNum[i]);
+
+                //Intent
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:+91"+contactNum[i]));
+                startActivity(intent);
+
+            }
+        });
+
 
         imgBtnMail.setOnClickListener(new View.OnClickListener() {
             @Override
