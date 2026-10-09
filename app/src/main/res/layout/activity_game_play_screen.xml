@@ -7,115 +7,53 @@
     android:layout_height="match_parent"
     tools:context=".diamond_game.GamePlayScreen">
 
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="50dp"
+       android:text="CREDIT : "
+       android:layout_marginTop="80dp"
+       android:layout_centerHorizontal="true"
+        android:id="@+id/tvGamePlayCredit"
+       />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:layout_below="@+id/tvGamePlayCredit"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnGamePlayCheckout"
+        />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+  <GridLayout
+      android:layout_marginTop="300dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:rowCount="3"
+      android:columnCount="3"
+      >
+
+    <ImageButton android:id="@+id/imgBtnGamePlay1" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay2" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay3" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
 
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            />
+      <ImageButton android:id="@+id/imgBtnGamePlay4" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay5"  android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay6" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay7" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay8" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
+
+      <ImageButton android:id="@+id/imgBtnGamePlay9" android:layout_height="0dp" android:layout_width="0dp"  android:layout_rowWeight="1" android:layout_columnWeight="1" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            >
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                >
-
-                    <ImageButton
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        />
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                >
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                >
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+  </GridLayout>
 </RelativeLayout>
