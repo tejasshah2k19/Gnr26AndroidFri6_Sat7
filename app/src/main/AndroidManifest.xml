@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gnr26AndroidFri6_Sat7">
         <activity
+            android:name=".diamond_game.GamePlayScreen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".whatsapp.UserActivity"
             android:exported="false" />
         <activity
@@ -20,19 +29,14 @@
         <activity
             android:name=".whatsapp.CallActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ListDataActivity"
             android:exported="false" />
         <activity
             android:name=".InputDataActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".IncomeTaxCalcActivity"
             android:exported="true" />
