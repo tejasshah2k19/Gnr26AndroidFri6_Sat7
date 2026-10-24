@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diamond_game.GamePlayActivityH">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREDIT"
+                android:layout_centerInParent="true"
+                android:id="@+id/tvGamePlayHCRedit"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout"
+                android:id="@+id/btnGameplayHCheckout"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvGamePlayHCRedit"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:rowCount="3"
+            android:columnCount="3"
+            >
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH1"
+                />
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH2"
+                />
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH3"
+                />
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH4"
+                />
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH5"
+                />
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH6"
+                />
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH7"
+                />
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH8"
+                />
+
+            <ImageButton
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/imgBtnGamePlayH9"
+                />
+
+
+
+
+        </GridLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

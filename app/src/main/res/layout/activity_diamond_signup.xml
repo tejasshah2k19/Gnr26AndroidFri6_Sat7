@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diamond_game.DiamondSignupActivity"
+    android:background="@color/bg_activity"
+    >
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imgDiamondSignupLogo"
+        android:src="@drawable/diamond_hmt_512"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDiamondSignupTitle"
+        android:text="@string/signup"
+        android:textSize="15pt"
+        android:textColor="#0B0A0A"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imgDiamondSignupLogo"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtDiamondSignupFirstName"
+        android:layout_below="@id/tvDiamondSignupTitle"
+        android:layout_marginTop="50dp"
+        android:hint="@string/first_name"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtDiamondSignupEmail"
+        android:layout_below="@id/edtDiamondSignupFirstName"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        android:drawableStart="@drawable/mail"
+        android:drawablePadding="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtDiamondSignupPassword"
+        android:layout_below="@id/edtDiamondSignupEmail"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDiamondSignupSubmit"
+        android:text="@string/submit"
+        android:layout_below="@id/edtDiamondSignupPassword"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDiamondSignupLoginLink"
+        android:text="@string/existing_user"
+        android:layout_below="@id/btnDiamondSignupSubmit"
+        android:textSize="8pt"
+        android:textColor="#BA255F"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+</RelativeLayout>

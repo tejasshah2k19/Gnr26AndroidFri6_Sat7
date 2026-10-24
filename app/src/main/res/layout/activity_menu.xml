@@ -6,17 +6,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".diamond_game.MenuActivity"
-    android:background="#FFA000"
+    android:background="@color/bg_activity"
     >
 
-    <Button
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnMenuStartGame"
-        android:text="@string/start_game"
+        android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:backgroundTint="#0B0806"
+        >
 
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMenuStartGame"
+            android:text="@string/start_game"
+             android:backgroundTint="#0B0806"
+            />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Leaderboard"
+        android:backgroundTint="#388E3C"
+        android:id="@+id/btnMenuLeaderboard"
         />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/btnMenuLogout"
+              android:backgroundTint="#C50505"
+            />
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

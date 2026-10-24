@@ -1,5 +1,7 @@
 package com.royal.diamond_game;
 
+import static android.view.View.INVISIBLE;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,7 +24,7 @@ public class GamePlayScreen extends AppCompatActivity {
 
     TextView tvCredit;
     Button btnCheckout;
-
+    int credit = 200;
     ImageButton btn[] = new ImageButton[9]; //array
 
     @Override
@@ -47,21 +49,36 @@ public class GamePlayScreen extends AppCompatActivity {
         btn[6] = findViewById(R.id.imgBtnGamePlay7);
         btn[7] = findViewById(R.id.imgBtnGamePlay8);
         btn[8] = findViewById(R.id.imgBtnGamePlay9);
-        btnCheckout.setClickable(false);
 
+        btnCheckout.setVisibility(INVISIBLE);
 
+        tvCredit.setText(credit+"");
+
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //api -> credit -> ++
+                if(btnCheckout.isClickable()) {
+                    Toast.makeText(getApplicationContext(), "Credit Successfully updated", Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         for(ImageButton b : btn) {
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     if(b.getBackground().toString().contains("RippleDrawable")) {
-
                         int randomNum = (int) (Math.random() * 100);//036.987452148 * 100
                         if (randomNum % 2 == 0) {
                             b.setBackgroundResource(R.drawable.diamond_hmt_512);
                             btnCheckout.setClickable(true);
+                            credit  = credit * 2;
+                            tvCredit.setText(credit+"");
+                            btnCheckout.setVisibility(View.VISIBLE);
 
                             //diamond
                         } else {

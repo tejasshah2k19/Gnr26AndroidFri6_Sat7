@@ -16,6 +16,7 @@ import com.royal.R;
 public class MenuActivity extends AppCompatActivity {
 
     Button btnStartGame;
+    Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,21 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         btnStartGame = findViewById(R.id.btnMenuStartGame);
+        btnLogout  = findViewById(R.id.btnMenuLogout);
 
 
         btnStartGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), GamePlayScreen.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), DiamondLoginActivity.class);
                 startActivity(intent);
             }
         });

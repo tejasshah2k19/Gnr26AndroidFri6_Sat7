@@ -1,0 +1,15 @@
+1) lib retrofit , json
+
+        implementation("com.squareup.retrofit2:retrofit:2.11.0")
+        implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+2) add internet permission
+        <uses-permission android:name="android.permission.INTERNET"/>
+
+3) create respective model class
+
+4) create Retrofit client --singleton
+
+5) service - api service --declaration of all api
+
+6) call -- consume -- use

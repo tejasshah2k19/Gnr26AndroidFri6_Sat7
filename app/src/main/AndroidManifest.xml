@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gnr26AndroidFri6_Sat7">
         <activity
-            android:name=".diamond_game.MenuActivity"
+            android:name=".diamond_game.DiamondSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".diamond_game.DiamondLoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,12 +26,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".diamond_game.GamePlayScreen"
+            android:name=".diamond_game.GamePlayActivityH"
+            android:exported="false" />
+        <activity
+            android:name=".diamond_game.MenuActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".diamond_game.GamePlayScreen"
+            android:exported="true" />
         <activity
             android:name=".whatsapp.UserActivity"
             android:exported="false" />
@@ -34,7 +45,7 @@
             android:exported="false" />
         <activity
             android:name=".whatsapp.CallActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ListDataActivity"
             android:exported="false" />
