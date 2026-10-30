@@ -47,7 +47,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtLoginPassword"
+        android:id="@+id/edtDiamondLoginPassword"
         android:layout_below="@id/edtDiamondLoginEmail"
         android:layout_marginTop="20dp"
         android:hint="Password"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnDiamondLoginSubmit"
         android:text="Submit"
-        android:layout_below="@id/edtLoginPassword"
+        android:layout_below="@id/edtDiamondLoginPassword"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         />

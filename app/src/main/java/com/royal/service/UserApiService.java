@@ -7,9 +7,9 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface UserApiService {
-    @POST("/url-pattern")
+    @POST("auth/signup")
     public Call<Object> signupApi(@Body UserModel userModel);
 
-    @POST("/url-pattern")
+    @POST("auth/login")
     public Call<Object> loginApi(@Body UserModel userModel);
 }

@@ -4,9 +4,10 @@ public class UserModel
 {
 
    private String firstName;
+   private String lastName;
     private String email;
     private String password;
-    private int credits;
+    private int credit;
 
     public String getFirstName() {
         return firstName;
@@ -32,11 +33,19 @@ public class UserModel
         this.password = password;
     }
 
-    public int getCredits() {
-        return credits;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setCredits(int credits) {
-        this.credits = credits;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
     }
 }
